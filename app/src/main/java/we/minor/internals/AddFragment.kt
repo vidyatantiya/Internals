@@ -41,7 +41,7 @@ class AddFragment : Fragment() {
 
             val dpd = DatePickerDialog(requireContext(), DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
                 // Display Selected date in TextView
-                binding.timetxt.text = "" + dayOfMonth + "/" + month + "/" + year
+                binding.timetxt.text = "" + dayOfMonth + "/" + month + "//" + year
 
             }, year, month, day)
             dpd.show()
