@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddFragment"
+    android:paddingTop="34dp"
+
+    android:background="@color/bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Assignment"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="40dp"
+        android:textSize="34dp"
+
+        android:fontFamily="@font/noyhsemilight"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/Team"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tadd"
+        android:background="#262a35"
+        android:hint="Name"
+        android:fontFamily="@font/noyhsemilight"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/white"
+        />
+
+
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/Weightage"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Team"
+        android:background="#262a35"
+        android:hint="Weightage"
+        android:textColor="@color/white"
+        android:fontFamily="@font/noyhsemilight"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/white"
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/marks"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Weightage"
+        android:background="#262a35"
+        android:hint="Marks"
+        android:textColor="@color/white"
+        android:fontFamily="@font/noyhsemilight"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/white"
+        />
+
+    <ImageView
+        android:id="@+id/date"
+        android:layout_width="34dp"
+        android:layout_height="40dp"
+        android:elevation="12dp"
+        android:layout_marginTop="34dp"
+        android:src="@drawable/datepicker"
+        app:layout_constraintTop_toBottomOf="@id/marks"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/timetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Date"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/noyhsemilight"
+        app:layout_constraintTop_toBottomOf="@id/marks"
+        app:layout_constraintStart_toEndOf="@id/date"
+
+        />
+
+
+
+    <ImageView
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/folder"
+        app:layout_constraintTop_toBottomOf="@id/marks"
+        android:layout_marginTop="37dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="90dp"
+
+        />
+
+    <TextView
+        android:id="@+id/uploadtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/noyhsemilight"
+        app:layout_constraintTop_toBottomOf="@id/marks"
+        app:layout_constraintStart_toEndOf="@id/upload"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signInBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#5468ff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Add Assignment"
+        android:textAllCaps="false"
+        android:fontFamily="@font/noyhsemilight"
+        android:textSize="18dp"
+        android:padding="16dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginTop="100dp"
+        app:cornerRadius="15dp"
+        app:layout_constraintTop_toBottomOf="@id/upload"
+
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

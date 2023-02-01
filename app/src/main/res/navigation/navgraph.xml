@@ -9,5 +9,36 @@
         android:id="@+id/loginFragment"
         android:name="we.minor.internals.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_classFragment"
+            app:destination="@id/classFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/classFragment"
+        android:name="we.minor.internals.ClassFragment"
+        android:label="fragment_class"
+        tools:layout="@layout/fragment_class" >
+        <action
+            android:id="@+id/action_classFragment_to_classDetailsFragment"
+            app:destination="@id/classDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/classDetailsFragment"
+        android:name="we.minor.internals.ClassDetailsFragment"
+        android:label="fragment_class_details"
+        tools:layout="@layout/fragment_class_details" >
+        <action
+            android:id="@+id/action_classDetailsFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="we.minor.internals.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_classDetailsFragment"
+            app:destination="@id/classDetailsFragment" />
+    </fragment>
 </navigation>
