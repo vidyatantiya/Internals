@@ -18,7 +18,7 @@ class ClassFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentClassBinding.inflate(inflater, container, false)
 
-        binding.view2.setOnClickListener {
+        binding.view1.setOnClickListener {
             Navigation.findNavController(requireActivity(), R.id.fragment).navigate(R.id.action_classFragment_to_classDetailsFragment)
         }
 

@@ -5,6 +5,7 @@ import android.app.DatePickerDialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
@@ -58,12 +59,19 @@ class AddFragment : Fragment() {
                 Intent.createChooser(intent, "Select Picture"),
                 1000
             )
-            binding.uploadtxt.text =  "Done"
-            Toast.makeText(requireContext(), "Uploaded Successfully", Toast.LENGTH_SHORT).show()
+            Handler().postDelayed({
+                binding.uploadtxt.text =  "Done"
+                Toast.makeText(requireContext(), "Uploaded Successfully", Toast.LENGTH_SHORT).show()
+            }, 5000)
+
         }
 
 
-        binding.tadd.setOnClickListener {
+        binding.signInBtn.setOnClickListener {
+            val builder = AlertDialog.Builder(requireContext())
+            builder.setTitle("Yey!")
+            builder.setMessage("Assignment Added Successfully")
+            builder.show()
             Navigation.findNavController(requireActivity(), R.id.fragment).navigate(R.id.action_addFragment_to_classDetailsFragment)
         }
 
